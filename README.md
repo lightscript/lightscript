@@ -4,7 +4,7 @@
 
 Intended to make programmers more productive by zapping cruft. ⚡
 
-Implemented as a fork of Babel's parser (babylon) wrapped in a Babel plugin. 
+Implemented as a fork of Babel's parser (babylon) wrapped in a Babel plugin.
 Fully compatible with JSX, all ES6/7 features, and the Flow static typing engine.
 
 Coming soon. A quick taste:
@@ -12,11 +12,11 @@ Coming soon. A quick taste:
 ```coffee
 fizzBuzz(n = 100) ->
   [for i from 1 thru n:
-    if i % 3 is 0 and i % 5 is 0:
+    if i % 3 == 0 and i % 5 == 0:
       "fizzbuzz"
-    elif i % 3 is 0:
+    elif i % 3 == 0:
       "fizz"
-    elif i % 5 is 0:
+    elif i % 5 == 0:
       "buzz"
     else:
       i
