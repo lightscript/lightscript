@@ -52,21 +52,21 @@ and [here](https://github.com/lightscript/babel-plugin-lightscript/tree/master/t
 
 "LightScript" is split across multiple repos:
 
-- The Parser: [babylon-lightscript](https://github.com/lightscript/babylon-lightscript)
+- **The Parser**: [babylon-lightscript](https://github.com/lightscript/babylon-lightscript)
   - The core of most of the language.
   - Because it is a fork, the repo would not be easily pulled into a monorepo.
-- The Babel Plugin: [babel-plugin-lightscript](https://github.com/lightscript/babel-plugin-lightscript)
+- **The Babel Plugin**: [babel-plugin-lightscript](https://github.com/lightscript/babel-plugin-lightscript)
   - Rewrites a "LightScript AST" into a "JavaScript AST".
   - The core of what you need to use LightScript.
-- The Babel Preset: [babel-plugin-lightscript](https://github.com/lightscript/babel-plugin-lightscript)
+- **The Babel Preset**: [babel-plugin-lightscript](https://github.com/lightscript/babel-plugin-lightscript)
   - Provides the rest of ES7 for ES6 environments, as well as runtime typechecking.
-- The Sublime Text Package: [lightscript-sublime](https://github.com/lightscript/lightscript-sublime)
+- **The Sublime Text Package**: [lightscript-sublime](https://github.com/lightscript/lightscript-sublime)
   - Provides syntax highlighting, albeit somewhat hackily.
   - Not yet installable from Package Control; blocking on https://github.com/wbond/package_control_channel/pull/6163.
-- The Atom Package: [lightscript-atom](https://github.com/lightscript/lightscript-atom)
+- **The Atom Package**: [lightscript-atom](https://github.com/lightscript/lightscript-atom)
   - Based on the Sublime Package.
   - Live on `apm`, you can install it today.
-- The Website: [lightscript.org](https://github.com/lightscript/lightscript.org)
+- **The Website**: [lightscript.org](https://github.com/lightscript/lightscript.org)
   - In addition to powering lightscript.org, it's also the best example of LightScript code in use.
     Hopefully that changes soon.
 
