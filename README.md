@@ -57,8 +57,7 @@ and [here](https://github.com/lightscript/babel-plugin-lightscript/tree/master/t
   - Because it is a fork, the repo would not be easily pulled into a monorepo.
 - The Babel Plugin: [babel-plugin-lightscript](https://github.com/lightscript/babel-plugin-lightscript)
   - Rewrites a "LightScript AST" into a "JavaScript AST".
-  - The core of what you need to use LightScript:
-    `npm i babel-core, babel-plugin-lightscript; babel --plugins lightscript myFile.js`.
+  - The core of what you need to use LightScript.
 - The Babel Preset: [babel-plugin-lightscript](https://github.com/lightscript/babel-plugin-lightscript)
   - Provides the rest of ES7 for ES6 environments, as well as runtime typechecking.
 - The Sublime Text Package: [lightscript-sublime](https://github.com/lightscript/lightscript-sublime)
