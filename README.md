@@ -3,14 +3,10 @@
 ### JavaScript, with cleaned-up syntax and a few conveniences.
 
 A superset of ES7 with JSX and Flow,
-implemented as a fork of Babel’s parser wrapped in a Babel plugin.
-
-Built to make programmers a little more productive.
+implemented as a fork of Babel’s parser wrapped in a Babel plugin. Built to make programmers a little more productive.
 
 See [lightscript.org](http://lightscript.org) for example code
-and language reference documentation.
-
-A quick taste:
+and language reference documentation. A quick taste:
 
 ```coffee
 fizzBuzz(n = 100) ->
@@ -47,9 +43,7 @@ In addition to all all ES7, JSX, and Flow features:
 - a few others
 
 Reference documentation is available at [lightscript.org](http://lightscript.org),
-or in Markdown format [here](https://github.com/lightscript/lightscript.org/blob/master/pages/docs/docs.md).
-
-Tests for all features can be seen
+or in Markdown format [here](https://github.com/lightscript/lightscript.org/blob/master/pages/docs/docs.md). Tests for all features can be seen
 [here](https://github.com/lightscript/babylon-lightscript/tree/lightscript/test/fixtures/lightscript)
 and [here](https://github.com/lightscript/babel-plugin-lightscript/tree/master/test/fixtures).
 
