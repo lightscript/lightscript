@@ -63,10 +63,10 @@ and [here](https://github.com/lightscript/babel-plugin-lightscript/tree/master/t
   - Provides the rest of ES7 for ES6 environments, as well as runtime typechecking.
 - **The Sublime Text Package**: [lightscript-sublime](https://github.com/lightscript/lightscript-sublime)
   - Provides syntax highlighting, albeit somewhat hackily.
-  - Not yet installable from Package Control; blocking on https://github.com/wbond/package_control_channel/pull/6163.
+  - Available now [on Package Control](https://packagecontrol.io/packages/LightScript).
 - **The Atom Package**: [lightscript-atom](https://github.com/lightscript/lightscript-atom)
   - Based on the Sublime Package.
-  - Live on `apm`, you can install it today.
+  - Available now on [`apm`](https://atom.io/packages/lightscript-atom).
 - **The Visual Studio Code Package**: [lightscript-vscode](https://github.com/lightscript/lightscript-vscode)
   - Based on the Sublime Package.
   - Available now on the [VS Code Extension Marketplace](https://marketplace.visualstudio.com/items?itemName=lightscript.lsc).
