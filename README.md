@@ -38,6 +38,7 @@ In addition to all all ES7, JSX, and Flow features:
 - Commaless Objects and Arrays
 - Automatic Semicolon Insertion that always works
 - Array Comprehensions
+- Object Comprehensions
 - Array-based for-loops
 - Range-based for-loops
 - a few others
@@ -58,7 +59,7 @@ and [here](https://github.com/lightscript/babel-plugin-lightscript/tree/master/t
 - **The Babel Plugin**: [babel-plugin-lightscript](https://github.com/lightscript/babel-plugin-lightscript)
   - Rewrites a "LightScript AST" into a "JavaScript AST".
   - The core of what you need to use LightScript.
-- **The Babel Preset**: [babel-plugin-lightscript](https://github.com/lightscript/babel-plugin-lightscript)
+- **The Babel Preset**: [babel-preset-lightscript](https://github.com/lightscript/babel-preset-lightscript)
   - Provides the rest of ES7 for ES6 environments, as well as runtime typechecking.
 - **The Sublime Text Package**: [lightscript-sublime](https://github.com/lightscript/lightscript-sublime)
   - Provides syntax highlighting, albeit somewhat hackily.
@@ -66,6 +67,9 @@ and [here](https://github.com/lightscript/babel-plugin-lightscript/tree/master/t
 - **The Atom Package**: [lightscript-atom](https://github.com/lightscript/lightscript-atom)
   - Based on the Sublime Package.
   - Live on `apm`, you can install it today.
+- **The Visual Studio Code Package**: [lightscript-vscode](https://github.com/lightscript/lightscript-vscode)
+  - Based on the Sublime Package.
+  - Available now on the [VS Code Extension Marketplace](https://marketplace.visualstudio.com/items?itemName=lightscript.lsc).
 - **The Website**: [lightscript.org](https://github.com/lightscript/lightscript.org)
   - In addition to powering lightscript.org, it's also the best example of LightScript code in use.
     Hopefully that changes soon.
