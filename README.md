@@ -6,45 +6,12 @@ See [lightscript.org](http://lightscript.org) for example code
 and language reference documentation. A quick taste:
 
 ```coffee
-Item({ item, isActive, onClick }) =>
+Item({ item, isActive }) =>
   className = if isActive: 'active' else: 'inactive'
 
-  <li onClick={onClick} className={className}>
+  <li className={className}>
     {item}
   </li>
-
-class List extends React.Component:
-
-  activateItem(itemId): void =>
-    if this.state.activeItem == itemId:
-      this.setState({ activeItem: null })
-    else:
-      this.setState({ activeItem: itemId })
-
-  render() ->
-    { items, activeItem } = this.state
-
-    <div>
-      {if activeItem:
-        <p>You have selected: {activeItem}</p>
-      else:
-        <p>Click an item to select one!</p>
-      }
-
-      <ul>
-        {items.map((item, i) =>
-          isActive = activeItem == item.id
-
-          if not item.hidden:
-            <Item
-              key={i}
-              item={item}
-              isActive={isActive}
-              onClick={() => this.activateItem(item.id)}
-            />
-        )}
-      </ul>
-    </div>
 ```
 
 Come hang out in [the gitter chatroom](https://gitter.im/lightscript/Lobby), where contributors can help you get started and answer any questions.
