@@ -1,0 +1,23 @@
+{
+  "name": "lightscript",
+  "version": "0.5.3",
+  "description": "LightScript faux-monorepo",
+  "author": "Alex Rattray <rattray.alex@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lightscript/lightscript.git"
+  },
+  "dependencies": {
+    "lerna": "^2.0.0-rc.5",
+    "mkdirp": "^0.5.1"
+  },
+  "scripts": {
+    "postinstall": "npm run clean && npm run setup",
+    "setup": "npm run self-link && lerna bootstrap",
+    "self-link": "./scripts/selfLink.js babel-plugin-lightscript babel-preset-lightscript",
+    "clean": "lerna clean --yes",
+    "test": "lerna run test",
+    "release": "node ./scripts/release.js"
+  }
+}
