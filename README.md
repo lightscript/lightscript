@@ -1,27 +1,53 @@
 # LightScript
 
-### JavaScript, with cleaned-up syntax and a few conveniences.
-
-A superset of ES7 with JSX and Flow,
-implemented as a fork of Babel’s parser wrapped in a Babel plugin. Built to make programmers a little more productive.
+*A close superset of ES7 with JSX and Flow, built with Babel. Designed to make programmers a little more productive.*
 
 See [lightscript.org](http://lightscript.org) for example code
 and language reference documentation. A quick taste:
 
 ```coffee
-fizzBuzz(n = 100) ->
-  [for i from 1 thru n:
-    if i % 3 == 0 and i % 5 == 0:
-      "fizzbuzz"
-    elif i % 3 == 0:
-      "fizz"
-    elif i % 5 == 0:
-      "buzz"
+Item({ item, isActive, onClick }) =>
+  className = if isActive: 'active' else: 'inactive'
+
+  <li onClick={onClick} className={className}>
+    {item}
+  </li>
+
+class List extends React.Component:
+
+  activateItem(itemId): void =>
+    if this.state.activeItem == itemId:
+      this.setState({ activeItem: null })
     else:
-      i
-  ]
+      this.setState({ activeItem: itemId })
+
+  render() ->
+    { items, activeItem } = this.state
+
+    <div>
+      {if activeItem:
+        <p>You have selected: {activeItem}</p>
+      else:
+        <p>Click an item to select one!</p>
+      }
+
+      <ul>
+        {items.map((item, i) =>
+          isActive = activeItem == item.id
+
+          if not item.hidden:
+            <Item
+              key={i}
+              item={item}
+              isActive={isActive}
+              onClick={() => this.activateItem(item.id)}
+            />
+        )}
+      </ul>
+    </div>
 ```
 
+Come hang out in [the gitter chatroom](https://gitter.im/lightscript/Lobby), where contributors can help you get started and answer any questions.
 
 ### Language Features
 
@@ -40,7 +66,7 @@ In addition to all all ES7, JSX, and Flow features:
 - Array Comprehensions
 - Object Comprehensions
 - Array-based for-loops
-- Range-based for-loops
+- Object-based for-loops
 - a few others
 
 Reference documentation is available at [lightscript.org](http://lightscript.org),
@@ -55,7 +81,6 @@ and [here](https://github.com/lightscript/babel-plugin-lightscript/tree/master/t
 
 - **The Parser**: [babylon-lightscript](https://github.com/lightscript/babylon-lightscript)
   - The core of most of the language.
-  - Because it is a fork, the repo would not be easily pulled into a monorepo.
 - **The Babel Plugin**: [babel-plugin-lightscript](https://github.com/lightscript/babel-plugin-lightscript)
   - Rewrites a "LightScript AST" into a "JavaScript AST".
   - The core of what you need to use LightScript.
@@ -71,7 +96,6 @@ and [here](https://github.com/lightscript/babel-plugin-lightscript/tree/master/t
   - Based on the Sublime Package.
   - Available now on the [VS Code Extension Marketplace](https://marketplace.visualstudio.com/items?itemName=lightscript.lsc).
 - **The Website**: [lightscript.org](https://github.com/lightscript/lightscript.org)
-  - In addition to powering lightscript.org, it's also the best example of LightScript code in use.
-    Hopefully that changes soon.
+  - In addition to powering lightscript.org, it's also an example of LightScript code in use.
 
 For now, the issue tracker on this repo should be used for bug reports and feature requests.
