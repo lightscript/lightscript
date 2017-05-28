@@ -11,17 +11,18 @@ lernaExec(`git pull`)
 lernaExec(`npm run preversion`)
 
 run(`lerna publish --skip-npm --skip-git`)
-const { version } = require('../lerna.json')
+const { version, packages } = require('../lerna.json')
+const versionStr = `v${version}`
 
 lernaExec(`git commit -am v${version}`)
-lernaExec(`git tag v${version}`)
+lernaExec(`git tag ${versionStr} -m ${versionStr}`)
 
 lernaExec(`npm publish`)
 
 lernaExec(`git push && git push --tags`)
 
-run(`git add packages lerna.json`)
-run(`git commit -m v${version}`)
-run(`git tag v${version}`)
+run(`git add ${packages.join(' ')} lerna.json`)
+run(`git commit -m ${versionStr}`)
+run(`git tag ${versionStr} -m ${versionStr}`)
 run(`git push`)
 run(`git push --tags`)

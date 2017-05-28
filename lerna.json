@@ -1,7 +1,11 @@
 {
   "lerna": "2.0.0-rc.5",
   "packages": [
-    "packages/*"
+    "babel-plugin-lightscript",
+    "babel-preset-lightscript",
+    "babylon-lightscript",
+    "lightscript-eslint",
+    "lightscript.org"
   ],
   "version": "0.5.5"
 }
