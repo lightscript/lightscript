@@ -3,6 +3,7 @@ const { run, lernaExec } = require('./run')
 try {
   run(`npm whoami`, true)
 } catch (err) {
+  console.warn('Cannot run as `lerna release`, must run as `npm run release`.')
   process.exit()
 }
 
