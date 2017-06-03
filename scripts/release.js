@@ -26,10 +26,10 @@ lernaExec(`git tag ${versionStr} -m ${versionStr}`)
 // push packages to npm & github
 lernaExec(`npm publish`)
 
-// update package `yarn.lock`s
+// update package `yarn.lock`s – won't make it out to npm unfortunately.
 lernaExec(`yarn`)
-// re-bootstrap
-run(`yarn clean && yarn setup`)
+lernaExec(`git add yarn.lock`)
+lernaExec(`git diff-index --quiet HEAD || git commit -m 'Update yarn.lock'`)  // https://stackoverflow.com/a/8123841/1048433
 
 lernaExec(`git push && git push --tags`)
 
