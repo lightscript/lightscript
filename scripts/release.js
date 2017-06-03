@@ -15,12 +15,16 @@ lernaExec(`git pull`)
 lernaExec(`npm run preversion`)
 
 // increment version numbers accross all package.json's
-run(`lerna publish --skip-npm --skip-git`)
+run(`lerna publish --skip-npm --skip-git --exact`)
 const { version, packages } = require('../lerna.json')
 const versionStr = `v${version}`
 
+// trigger yarn.lock updates across packages
+run(`yarn`)
+
 // commit & tag version bumps
-lernaExec(`git commit -am v${version}`)
+lernaExec(`git add yarn.lock package.json`)
+lernaExec(`git commit -m v${version}`)
 lernaExec(`git tag ${versionStr} -m ${versionStr}`)
 
 // push packages to npm & github
