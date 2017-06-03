@@ -19,16 +19,18 @@ run(`lerna publish --skip-npm --skip-git --exact`)
 const { version, packages } = require('../lerna.json')
 const versionStr = `v${version}`
 
-// trigger yarn.lock updates across packages
-run(`yarn`)
-
 // commit & tag version bumps
-lernaExec(`git add yarn.lock package.json`)
-lernaExec(`git commit -m v${version}`)
+lernaExec(`git commit -am v${version}`)
 lernaExec(`git tag ${versionStr} -m ${versionStr}`)
 
 // push packages to npm & github
 lernaExec(`npm publish`)
+
+// update package `yarn.lock`s
+lernaExec(`yarn`)
+// re-bootstrap
+run(`yarn clean && yarn setup`)
+
 lernaExec(`git push && git push --tags`)
 
 // commit & push version bump at monorepo level
