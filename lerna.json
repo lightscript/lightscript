@@ -7,6 +7,5 @@
     "lightscript-eslint",
     "lightscript.org"
   ],
-  "version": "0.5.7",
-  "npmClient": "yarn"
+  "version": "0.5.7"
 }

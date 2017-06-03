@@ -15,7 +15,7 @@
   },
   "scripts": {
     "postinstall": "npm run clean && npm run setup",
-    "setup": "npm run self-link && lerna bootstrap",
+    "setup": "npm run self-link && lerna bootstrap --npm-client yarn",
     "self-link": "./scripts/selfLink.js babel-plugin-lightscript babel-preset-lightscript",
     "clean": "lerna clean --yes",
     "test": "lerna run test",
